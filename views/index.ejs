@@ -9,15 +9,17 @@
     <title>Shorter</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Shorter app</h1>
+    <div class="container .bg-light border">
+        <h1 class="text-info bg-light">Shorter app</h1>
+        <div class=" rounded">
 
-        <form action="/shorter" method="post" class="my-4 form-inline">
-            <label for="fullUrl" class="sr-only">URL</label>
-            <input type="url" name="fullUrl" id="fullUrl" placeholder="URL" required class="form-control col mr-2">
-            <button type="submit" class="btn btn-success">Shorter</button>
-        </form>
-        <table class="table table-striped table-responsive">
+            <form action="/shorter" method="post" class="my-4 form-inline">
+                <label for="fullUrl" class="sr-only">URL</label>
+                <input type="url" name="fullUrl" id="fullUrl" placeholder="URL" required class="form-control col mr-2">
+                <button type="submit" class="btn btn-success">Shorter</button>
+            </form>
+        </div>
+        <table class="table table-striped table-responsive border shadow-lg p-3 mb-5 bg-white rounded">
             <thead>
                 <tr>
                     <th>Full Url</th>
@@ -33,8 +35,6 @@
                     <td><%= short.clicks %></td>
                 </tr>
                     <%})%>
-
-                
             </tbody>
         </table>
 </div>
